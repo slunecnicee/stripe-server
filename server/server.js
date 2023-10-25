@@ -11,7 +11,7 @@ app.use(morgan("dev"));
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://amazon-ecommerce-sandy.vercel.app/",
     methods: "GET,POST,PUT,DELETE",
     optionsSuccessStatus: 204,
     preflightContinue: false,
@@ -93,8 +93,8 @@ app.post("/create-checkout-session", async (req, res) => {
     },
     line_items,
     mode: "payment",
-    success_url: "http://localhost:3000/success-page",
-    cancel_url: "http://localhost:3000/cart",
+    success_url: "https://amazon-ecommerce-sandy.vercel.app/success-page",
+    cancel_url: "https://amazon-ecommerce-sandy.vercel.app/cart",
   });
 
   res.send({ url: session.url });
