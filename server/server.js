@@ -9,14 +9,7 @@ const bodyParser = require("body-parser");
 
 app.use(morgan("dev"));
 
-app.use(
-  cors({
-    origin: "https://amazon-ecommerce-sandy.vercel.app/",
-    methods: "GET,POST,PUT,DELETE",
-    optionsSuccessStatus: 204,
-    preflightContinue: false,
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
